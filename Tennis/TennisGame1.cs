@@ -54,10 +54,8 @@ namespace Tennis
             else
             {
                 string score1 = score;
-                int tempScore1;
-                tempScore1 = player1Score;
 
-                score1 = GetScore(tempScore1, score1);
+                score1 = GetScore(player1Score, score1);
                 score = score1;
                 string score2 = score;
                 int tempScore2;
