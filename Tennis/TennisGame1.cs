@@ -32,19 +32,8 @@ namespace Tennis
 
                 if (player1Score <= 2)
                 {
-                    var tempScore = GetScore(player1Score);
-                    switch (player1Score)
-                    {
-                        case 0:
-                            score = $"{tempScore}-All";
-                            break;
-                        case 1:
-                            score = "Fifteen-All";
-                            break;
-                        case 2:
-                            score = "Thirty-All";
-                            break;
-                    }
+                    var tempScore = GetScore(player1Score) + "-All";
+                    score = tempScore;
                 }
                 else
                 {
