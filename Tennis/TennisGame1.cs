@@ -42,16 +42,31 @@ namespace Tennis
                 //IsAdvOrWin
                 if (IsAdv())
                 {
-                    return $"Advantage {WhoLead()}";
+                    return Adv();
                 }
 
-                return $"Win for {WhoLead()}";
+                return Win();
             }
             else
             {
                 //normal score
-                return GetScore(player1Score) + "-" + GetScore(player2Score);
+                return NormalScore();
             }
+        }
+
+        private string NormalScore()
+        {
+            return GetScore(player1Score) + "-" + GetScore(player2Score);
+        }
+
+        private string Win()
+        {
+            return $"Win for {WhoLead()}";
+        }
+
+        private string Adv()
+        {
+            return $"Advantage {WhoLead()}";
         }
 
         private string SameScore()
