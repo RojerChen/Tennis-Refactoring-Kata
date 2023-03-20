@@ -54,26 +54,35 @@ namespace Tennis
             }
             else
             {
-                    score = NormalScore(1, score);
-                    score = NormalScore(2, score);
-            }
-            return score;
-        }
+                string score1 = score;
+                int tempScore1;
+                if (1 == 1)
+                {
+                    tempScore1 = player1Score;
+                }
+                else
+                {
+                    score1 += "-";
+                    tempScore1 = player2Score;
+                }
 
-        private string NormalScore(int i, string score)
-        {
-            int tempScore;
-            if (i == 1)
-            {
-                tempScore = player1Score;
-            }
-            else
-            {
-                score += "-";
-                tempScore = player2Score;
-            }
+                score1 = GetScore(tempScore1, score1);
+                score = score1;
+                string score2 = score;
+                int tempScore2;
+                if (2 == 1)
+                {
+                    tempScore2 = player1Score;
+                }
+                else
+                {
+                    score2 += "-";
+                    tempScore2 = player2Score;
+                }
 
-            score = GetScore(tempScore, score);
+                score2 = GetScore(tempScore2, score2);
+                score = score2;
+            }
             return score;
         }
 
