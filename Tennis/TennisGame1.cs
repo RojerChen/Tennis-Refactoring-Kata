@@ -1,3 +1,5 @@
+using System;
+
 namespace Tennis
 {
     public class TennisGame1 : ITennisGame
@@ -46,13 +48,10 @@ namespace Tennis
             else if (player1Score >= 4 || player2Score >= 4)
             {
                 //IsAdvOrWin
-                if (player1Score - player2Score == 1)
+                if (Math.Abs(player1Score - player2Score) == 1)
                 {
-                    score = "Advantage player1";
-                }
-                else if (player1Score - player2Score == -1)
-                {
-                    score = "Advantage player2";
+                    var whoLead = player1Score > player2Score ? "player1" : "player2";
+                    score = $"Advantage {whoLead}";
                 }
                 else if (player1Score - player2Score >= 2)
                 {
