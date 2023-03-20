@@ -50,8 +50,7 @@ namespace Tennis
                 //IsAdvOrWin
                 if (Math.Abs(player1Score - player2Score) == 1)
                 {
-                    var whoLead = player1Score > player2Score ? "player1" : "player2";
-                    score = $"Advantage {whoLead}";
+                    score = $"Advantage {WhoLead()}";
                 }
                 else if (player1Score - player2Score >= 2)
                 {
@@ -71,6 +70,12 @@ namespace Tennis
             }
 
             return score;
+        }
+
+        private string WhoLead()
+        {
+            var whoLead = player1Score > player2Score ? "player1" : "player2";
+            return whoLead;
         }
 
         private static string GetScore(int tempScore, string score)
