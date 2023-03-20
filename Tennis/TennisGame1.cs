@@ -56,18 +56,26 @@ namespace Tennis
             {
                 for (var i = 1; i < 3; i++)
                 {
-                    if (i == 1)
-                    {
-                        tempScore = player1Score;
-                    }
-                    else
-                    {
-                        score += "-"; tempScore = player2Score;
-                    }
-
-                    score = GetScore(tempScore, score);
+                    score = NormalScore(i, score);
                 }
             }
+            return score;
+        }
+
+        private string NormalScore(int i, string score)
+        {
+            int tempScore;
+            if (i == 1)
+            {
+                tempScore = player1Score;
+            }
+            else
+            {
+                score += "-";
+                tempScore = player2Score;
+            }
+
+            score = GetScore(tempScore, score);
             return score;
         }
 
