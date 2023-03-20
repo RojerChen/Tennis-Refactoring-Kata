@@ -29,21 +29,27 @@ namespace Tennis
             if (IsSameScore())
             {
                 string score = "";
-                switch (player1Score)
+
+                if (player1Score <= 2)
                 {
-                    case 0:
-                        score = "Love-All";
-                        break;
-                    case 1:
-                        score = "Fifteen-All";
-                        break;
-                    case 2:
-                        score = "Thirty-All";
-                        break;
-                    default:
-                        score = "Deuce";
-                        break;
+                    switch (player1Score)
+                    {
+                        case 0:
+                            score = "Love-All";
+                            break;
+                        case 1:
+                            score = "Fifteen-All";
+                            break;
+                        case 2:
+                            score = "Thirty-All";
+                            break;
+                    } 
                 }
+                else
+                {
+                    score = "Deuce"; 
+                }
+           
 
                 return score;
             }
