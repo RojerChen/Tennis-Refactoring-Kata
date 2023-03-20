@@ -28,13 +28,13 @@ namespace Tennis
         {
             if (IsSameScore())
             {
-                if (player1Score > 2)
+                if (IsDeuce())
                 {
-                    return "Deuce";
+                    return Deuce();
                 }
                 else
                 {
-                    return GetScore(player1Score) + "-All";
+                    return SameScore();
                 }
             }
             else if (IsAdvOrWin())
@@ -52,6 +52,21 @@ namespace Tennis
                 //normal score
                 return GetScore(player1Score) + "-" + GetScore(player2Score);
             }
+        }
+
+        private string SameScore()
+        {
+            return GetScore(player1Score) + "-All";
+        }
+
+        private static string Deuce()
+        {
+            return "Deuce";
+        }
+
+        private bool IsDeuce()
+        {
+            return player1Score > 2;
         }
 
         private string GetScore(int score)
