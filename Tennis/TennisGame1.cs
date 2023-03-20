@@ -63,7 +63,24 @@ namespace Tennis
 
                 string score2 = GetNormalScore();
                 score2 += "-";
-                return GetScore(player2Score, score2);
+                string score = score2;
+                switch (player2Score)
+                {
+                    case 0:
+                        score += "Love";
+                        break;
+                    case 1:
+                        score += "Fifteen";
+                        break;
+                    case 2:
+                        score += "Thirty";
+                        break;
+                    case 3:
+                        score += "Forty";
+                        break;
+                }
+
+                return score;
             }
         }
 
@@ -108,27 +125,6 @@ namespace Tennis
         {
             var whoLead = player1Score > player2Score ? "player1" : "player2";
             return whoLead;
-        }
-
-        private static string GetScore(int tempScore, string score)
-        {
-            switch (tempScore)
-            {
-                case 0:
-                    score += "Love";
-                    break;
-                case 1:
-                    score += "Fifteen";
-                    break;
-                case 2:
-                    score += "Thirty";
-                    break;
-                case 3:
-                    score += "Forty";
-                    break;
-            }
-
-            return score;
         }
     }
 }
