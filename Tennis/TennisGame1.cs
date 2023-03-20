@@ -56,7 +56,7 @@ namespace Tennis
                 //normal score
                 string score2 = GetScore(player1Score, score);
                 score2 += "-";
-                score = GetScore(player2Score, score2);
+                return GetScore(player2Score, score2);
             }
 
             return score;
