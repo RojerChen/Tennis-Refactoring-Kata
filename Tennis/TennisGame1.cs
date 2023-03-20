@@ -61,7 +61,7 @@ namespace Tennis
             {
                 //normal score
 
-                string score2 = GetNormalScore();
+                string score2 = GetNormalScore(player1Score);
                 score2 += "-";
                 string score = score2;
                 switch (player2Score)
@@ -84,26 +84,26 @@ namespace Tennis
             }
         }
 
-        private string GetNormalScore()
+        private string GetNormalScore(int score)
         {
-            string score = "";
-            switch (player1Score)
+            string result = "";
+            switch (score)
             {
                 case 0:
-                    score = "Love";
+                    result = "Love";
                     break;
                 case 1:
-                    score = "Fifteen";
+                    result = "Fifteen";
                     break;
                 case 2:
-                    score = "Thirty";
+                    result = "Thirty";
                     break;
                 case 3:
-                    score = "Forty";
+                    result = "Forty";
                     break;
             }
 
-            return score;
+            return result;
         }
 
         private bool IsSameScore()
