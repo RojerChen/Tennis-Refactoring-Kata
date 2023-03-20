@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 
 namespace Tennis
 {
@@ -25,9 +26,9 @@ namespace Tennis
 
         public string GetScore()
         {
-            string score = "";
             if (IsSameScore())
             {
+                string score = "";
                 switch (player1Score)
                 {
                     case 0:
@@ -43,6 +44,8 @@ namespace Tennis
                         score = "Deuce";
                         break;
                 }
+
+                return score;
             }
             else if (IsAdvOrWin())
             {
@@ -57,12 +60,10 @@ namespace Tennis
             else
             {
                 //normal score
-                string score2 = GetScore(player1Score, score);
+                string score2 = GetScore(player1Score, "");
                 score2 += "-";
                 return GetScore(player2Score, score2);
             }
-
-            return score;
         }
 
         private bool IsSameScore()
