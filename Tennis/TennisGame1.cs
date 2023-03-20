@@ -27,7 +27,7 @@ namespace Tennis
         {
             string score = "";
             var tempScore = 0;
-            if (player1Score == player2Score)
+            if (IsSameScore())
             {
                 switch (player1Score)
                 {
@@ -64,6 +64,11 @@ namespace Tennis
             }
 
             return score;
+        }
+
+        private bool IsSameScore()
+        {
+            return player1Score == player2Score;
         }
 
         private bool IsAdv()
