@@ -48,7 +48,7 @@ namespace Tennis
             else if (IsAdvOrWin())
             {
                 //IsAdvOrWin
-                if (Math.Abs(player1Score - player2Score) == 1)
+                if (IsAdv())
                 {
                     return $"Advantage {WhoLead()}";
                 }
@@ -64,6 +64,11 @@ namespace Tennis
             }
 
             return score;
+        }
+
+        private bool IsAdv()
+        {
+            return Math.Abs(player1Score - player2Score) == 1;
         }
 
         private bool IsAdvOrWin()
