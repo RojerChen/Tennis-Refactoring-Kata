@@ -60,13 +60,7 @@ namespace Tennis
             else
             {
                 //normal score
-
-                string score2 = GetNormalScore(player1Score);
-                score2 += "-";
-                string score = GetNormalScore(player2Score);
-               
-
-                return score2 + score;
+                return GetNormalScore(player1Score) + "-"  + GetNormalScore(player2Score);
             }
         }
 
