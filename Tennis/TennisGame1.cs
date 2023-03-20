@@ -26,7 +26,6 @@ namespace Tennis
         public string GetScore()
         {
             string score = "";
-            var tempScore = 0;
             if (IsSameScore())
             {
                 switch (player1Score)
