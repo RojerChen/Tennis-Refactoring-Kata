@@ -64,16 +64,16 @@ namespace Tennis
                 switch (player1Score)
                 {
                     case 0:
-                        score += "Love";
+                        score = "Love";
                         break;
                     case 1:
-                        score += "Fifteen";
+                        score = "Fifteen";
                         break;
                     case 2:
-                        score += "Thirty";
+                        score = "Thirty";
                         break;
                     case 3:
-                        score += "Forty";
+                        score = "Forty";
                         break;
                 }
 
