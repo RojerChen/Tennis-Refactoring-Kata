@@ -45,7 +45,7 @@ namespace Tennis
                         break;
                 }
             }
-            else if (player1Score >= 4 || player2Score >= 4)
+            else if (IsAdvOrWin())
             {
                 //IsAdvOrWin
                 if (Math.Abs(player1Score - player2Score) == 1)
@@ -64,6 +64,11 @@ namespace Tennis
             }
 
             return score;
+        }
+
+        private bool IsAdvOrWin()
+        {
+            return player1Score >= 4 || player2Score >= 4;
         }
 
         private string WhoLead()
