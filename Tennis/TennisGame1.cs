@@ -28,13 +28,13 @@ namespace Tennis
         {
             if (IsSameScore())
             {
-                if (player1Score <= 2)
+                if (player1Score > 2)
                 {
-                    return GetScore(player1Score) + "-All";
+                    return "Deuce";
                 }
                 else
                 {
-                    return "Deuce";
+                    return GetScore(player1Score) + "-All";
                 }
             }
             else if (IsAdvOrWin())
