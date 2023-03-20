@@ -61,26 +61,33 @@ namespace Tennis
             {
                 //normal score
                 string score = "";
-                switch (player1Score)
-                {
-                    case 0:
-                        score = "Love";
-                        break;
-                    case 1:
-                        score = "Fifteen";
-                        break;
-                    case 2:
-                        score = "Thirty";
-                        break;
-                    case 3:
-                        score = "Forty";
-                        break;
-                }
+                score = GetNormalScore(score);
 
                 string score2 = score;
                 score2 += "-";
                 return GetScore(player2Score, score2);
             }
+        }
+
+        private string GetNormalScore(string score)
+        {
+            switch (player1Score)
+            {
+                case 0:
+                    score = "Love";
+                    break;
+                case 1:
+                    score = "Fifteen";
+                    break;
+                case 2:
+                    score = "Thirty";
+                    break;
+                case 3:
+                    score = "Forty";
+                    break;
+            }
+
+            return score;
         }
 
         private bool IsSameScore()
