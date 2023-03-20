@@ -60,11 +60,11 @@ namespace Tennis
             else
             {
                 //normal score
-                return GetNormalScore(player1Score) + "-"  + GetNormalScore(player2Score);
+                return GetScore(player1Score) + "-"  + GetScore(player2Score);
             }
         }
 
-        private string GetNormalScore(int score)
+        private string GetScore(int score)
         {
             string result = "";
             switch (score)
