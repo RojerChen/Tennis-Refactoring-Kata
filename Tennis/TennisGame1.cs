@@ -28,20 +28,14 @@ namespace Tennis
         {
             if (IsSameScore())
             {
-                string score = "";
-
                 if (player1Score <= 2)
                 {
-                    var tempScore = GetScore(player1Score) + "-All";
-                    score = tempScore;
+                    return GetScore(player1Score) + "-All";
                 }
                 else
                 {
-                    score = "Deuce"; 
+                    return "Deuce";
                 }
-           
-
-                return score;
             }
             else if (IsAdvOrWin())
             {
@@ -56,7 +50,7 @@ namespace Tennis
             else
             {
                 //normal score
-                return GetScore(player1Score) + "-"  + GetScore(player2Score);
+                return GetScore(player1Score) + "-" + GetScore(player2Score);
             }
         }
 
