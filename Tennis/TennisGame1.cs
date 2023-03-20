@@ -41,7 +41,6 @@ namespace Tennis
                     default:
                         score = "Deuce";
                         break;
-
                 }
             }
             else if (player1Score >= 4 || player2Score >= 4)
@@ -56,33 +55,19 @@ namespace Tennis
             {
                 string score1 = score;
                 int tempScore1;
-                if (1 == 1)
-                {
-                    tempScore1 = player1Score;
-                }
-                else
-                {
-                    score1 += "-";
-                    tempScore1 = player2Score;
-                }
+                tempScore1 = player1Score;
 
                 score1 = GetScore(tempScore1, score1);
                 score = score1;
                 string score2 = score;
                 int tempScore2;
-                if (2 == 1)
-                {
-                    tempScore2 = player1Score;
-                }
-                else
-                {
-                    score2 += "-";
-                    tempScore2 = player2Score;
-                }
+                score2 += "-";
+                tempScore2 = player2Score;
 
                 score2 = GetScore(tempScore2, score2);
                 score = score2;
             }
+
             return score;
         }
 
@@ -108,4 +93,3 @@ namespace Tennis
         }
     }
 }
-
