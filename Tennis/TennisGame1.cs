@@ -63,22 +63,8 @@ namespace Tennis
 
                 string score2 = GetNormalScore(player1Score);
                 score2 += "-";
-                string score = "";
-                switch (player2Score)
-                {
-                    case 0:
-                        score += "Love";
-                        break;
-                    case 1:
-                        score += "Fifteen";
-                        break;
-                    case 2:
-                        score += "Thirty";
-                        break;
-                    case 3:
-                        score += "Forty";
-                        break;
-                }
+                string score = GetNormalScore(player2Score);
+               
 
                 return score2 + score;
             }
