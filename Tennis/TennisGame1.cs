@@ -53,17 +53,10 @@ namespace Tennis
             }
             else
             {
-                string score1 = score;
-
-                score1 = GetScore(player1Score, score1);
-                score = score1;
-                string score2 = score;
-                int tempScore2;
+                //normal score
+                string score2 = GetScore(player1Score, score);
                 score2 += "-";
-                tempScore2 = player2Score;
-
-                score2 = GetScore(tempScore2, score2);
-                score = score2;
+                score = GetScore(player2Score, score2);
             }
 
             return score;
