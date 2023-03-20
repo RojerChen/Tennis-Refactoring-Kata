@@ -52,13 +52,9 @@ namespace Tennis
                 {
                     score = $"Advantage {WhoLead()}";
                 }
-                else if (player1Score - player2Score >= 2)
-                {
-                    score = "Win for player1";
-                }
                 else
                 {
-                    score = "Win for player2";
+                    score = $"Win for {WhoLead()}";
                 }
             }
             else
