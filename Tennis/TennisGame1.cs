@@ -63,7 +63,7 @@ namespace Tennis
 
                 string score2 = GetNormalScore(player1Score);
                 score2 += "-";
-                string score = score2;
+                string score = "";
                 switch (player2Score)
                 {
                     case 0:
@@ -80,7 +80,7 @@ namespace Tennis
                         break;
                 }
 
-                return score;
+                return score2 + score;
             }
         }
 
