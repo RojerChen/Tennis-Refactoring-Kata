@@ -32,14 +32,12 @@ namespace Tennis
                 {
                     return Deuce();
                 }
-                else
-                {
-                    return SameScore();
-                }
+
+                return SameScore();
             }
-            else if (IsAdvOrWin())
+
+            if (IsAdvOrWin())
             {
-                //IsAdvOrWin
                 if (IsAdv())
                 {
                     return Adv();
@@ -47,11 +45,8 @@ namespace Tennis
 
                 return Win();
             }
-            else
-            {
-                //normal score
-                return NormalScore();
-            }
+
+            return NormalScore();
         }
 
         private string NormalScore()
