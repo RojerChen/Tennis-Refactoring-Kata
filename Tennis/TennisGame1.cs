@@ -46,16 +46,15 @@ namespace Tennis
             else if (player1Score >= 4 || player2Score >= 4)
             {
                 //IsAdvOrWin
-                var minusResult = player1Score - player2Score;
-                if (minusResult == 1)
+                if (player1Score - player2Score == 1)
                 {
                     score = "Advantage player1";
                 }
-                else if (minusResult == -1)
+                else if (player1Score - player2Score == -1)
                 {
                     score = "Advantage player2";
                 }
-                else if (minusResult >= 2)
+                else if (player1Score - player2Score >= 2)
                 {
                     score = "Win for player1";
                 }
